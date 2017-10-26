@@ -294,7 +294,7 @@ To do this we call `gl.viewport` and pass it the current size of the canvas.
 This tells WebGL the -1 +1 clip space maps to 0 &lt;-&gt; `gl.canyvas.width` for x and 0 &lt;-&gt; `gl.canvas.height`
 for y.
 
-We clear the canvas. `0, 0, 0, 0` are red, green, blue, alpha respectivel so in this case we're making the canvas transparent.
+We clear the canvas. `0, 0, 0, 0` are red, green, blue, alpha respectively, so in this case we're making the canvas transparent.
 
     // Clear the canvas
     gl.clearColor(0, 0, 0, 0);
