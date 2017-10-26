@@ -265,29 +265,29 @@ The last argument, `gl.STATIC_DRAW` is a hint to WebGL about how we'll use the d
 WebGL can try to use that hint to optimize certain things. `gl.STATIC_DRAW` tells WebGL
 we are not likely to change this data much.
 
-The code up to this point is *initialization code*. Code that gets run once when we
-load the page. The code below this point is *rendering code* or code that should
+The code up to this point is *initialization code*, code that gets run once when we
+load the page. The code below this point is *rendering code*, or code that should
 get executed each time we want to render/draw.
 
 ## Rendering
 
-Before we draw we should resize the canvas to match its display size. Canvases just like Images have 2 sizes.
-The number of pixels actually in them and separately the size they are displayed. CSS determines the size
-the canvas is displayed. **You should always set the size you want a canvas with CSS** since it is far far
+Before we draw, we should resize the canvas to match its display size. Canvases, just like Images, have 2 sizes:
+the number of pixels actually in them and separately the size they are displayed. CSS determines the size
+the canvas is displayed. **You should always set canvas size with CSS** since it is far far
 more flexible than any other method.
 
-To make the number of pixels in the canvas match the size it's displayed
+To make the number of pixels in the canvas match the size it's displayed,
 [I'm using a helper function you can read about here](webgl-resizing-the-canvas.html).
 
-In nearly all of these samples the canvas size is 400x300 pixels if the sample is run in its own window
+In nearly all of these samples, the canvas size is 400x300 pixels if the sample is run in its own window,
 but stretches to fill the available space if it's inside an iframe like it is on this page.
-By letting CSS determine the size and then adjusting to match we easily handle both of these cases.
+By letting CSS determine the size and then adjusting to match, we easily handle both of these cases.
 
     webglUtils.resizeCanvasToDisplaySize(gl.canvas);
 
 We need to tell WebGL how to convert from the clip space
 values we'll be setting `gl_Position` to back into pixels, often called screen space.
-To do this we call `gl.viewport` and pass it the current size of the canvas.
+To do this, we call `gl.viewport` and pass it the current size of the canvas.
 
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
