@@ -361,8 +361,7 @@ triangle will be drawn at clip space coordinates
       0, 0.5,
       0.7, 0,
 
-Converting from clip space to screen space if the canvas size
-happned to be 400x300 we'd get something like this
+Converting from clip space to screen space if the canvas size happened to be 400x300, we'd get something like this
 
      clip space      screen space
        0, 0       ->   200, 150
